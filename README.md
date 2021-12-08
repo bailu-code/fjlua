@@ -2,13 +2,13 @@
 参考c# [tolua](https://github.com/topameng/tolua )框架的实现逻辑，优化[luajava](https://github.com/jasonsantos/luajava)中lua调用java代码的性能  
 
 **重写java对象在lua中的管理方式**   
-**重写java对象方法的调用方式**
-**使用了luajit**
+**重写java对象方法的调用方式**  
+**使用了luajit**  
 
-目前的版本属于不完善版本，未经过完整测试
-待完善：java对象池监控体系，java注册方法到lua中很繁琐，需要继承自动生成注册工具
+目前的版本属于不完善版本，未经过完整测试  
+待完善：java对象池监控体系，java注册方法到lua中很繁琐需要开发一个自动生成注册工具  
 
-简单性能测试数据 `fjlua` `luaj` `luajava`
+简单性能测试数据 `fjlua` `luaj` `luajava`  
 | Benchmark                |  Mode | Cnt |  Score  |  Units |
 | -------------------------|-------|-----|---------|--------|
 | FjluaTest.methodCall     | thrpt |  2  |1392.487 |  ops/ms|
