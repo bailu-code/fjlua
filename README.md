@@ -3,6 +3,7 @@
 
 **重写java对象在lua中的管理方式**   
 **重写java对象方法的调用方式**
+**使用了luajit**
 
 目前的版本属于不完善版本，未经过完整测试
 待完善：java对象池监控体系，java注册方法到lua中很繁琐，需要继承自动生成注册工具
@@ -26,7 +27,7 @@
 | FjluaTest.newInstance    |  avgt |  2  |  79.379 |   ms/op|
 | FjluaTest.sort           |  avgt |  2  |   0.002 |   ms/op|
 | FjluaTest.sum            |  avgt |  2  |   0.071 |   ms/op|
-| LuajTest.methodCall      |  avgt |  2  |  ≈ 10⁻⁴ |   ms/op|
+| LuajTest.methodCall      |  avgt |  2  |  ≈ 10⁻⁴  |   ms/op|
 | LuajTest.newInstance     |  avgt |  2  |  11.505 |   ms/op|
 | LuajTest.sort            |  avgt |  2  |   0.043 |   ms/op|
 | LuajTest.sum             |  avgt |  2  |   2.641 |   ms/op|

@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'com.spark.framework'
+version '1.0-SNAPSHOT'
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files("lib/luajava-1.1.jar")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.28'
+    testAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.28'
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.4'
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    implementation group: 'com.github.ben-manes.caffeine', name: 'caffeine', version: '2.9.2'
+    implementation group: 'org.jctools', name: 'jctools-core', version: '3.3.0'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    implementation group: 'it.unimi.dsi', name: 'fastutil', version: '8.5.6'
+    implementation group: 'org.jetbrains', name: 'annotations', version: '23.0.0'
+
+    implementation group: 'org.luaj', name: 'luaj-jse', version: '3.0.1'
+    implementation group: 'org.apache.bcel', name: 'bcel', version: '6.5.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
